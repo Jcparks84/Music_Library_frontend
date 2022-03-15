@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import NavBar from './Components/NavBar/NavBar';
+// import NavBar from './Components/NavBar/NavBar';
 import AddMusic from './Components/AddMusic/AddMusic';
+import './Components/DisplayMusic/DisplayMusic'
+import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
 
 
 
@@ -34,11 +36,19 @@ function App(){
   }
   
   return (
-    <div>
-      <NavBar />  
+    <div className='container-fluid'>
+      <h1 style={{margin: '1em'}}>
+        Music <small className='text-muted'>Library</small>
+        </h1>
+      {/* <NavBar /> */}
+      <div className='addmusic'>
        <AddMusic addMusic={addMusic}/>  {/* here we will need to pass down our addMusic function */}
-     
-    </div>
+       </div>
+       <div className='displaymusic'>
+       <DisplayMusic parentPost={music}/>
+       <div/>
+     </div>
+     </div>
   );
   }
 
