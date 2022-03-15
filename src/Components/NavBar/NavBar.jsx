@@ -1,19 +1,23 @@
+import { useState, useEffect } from "react";
 import './NavBar.css'
 
 const NavBar = (props) => {
+    const [searchTerm, setSearchTerm] = useState('');
 
-    <form action="/" method="get">
-        <label htmlFor="header-search">
-            <span className="visually-hidden">Search blog posts</span>
-        </label>
-        <input
-            type="text"
-            id="header-search"
-            placeholder="Search blog posts"
-            name="s" 
-        />
-        <button type="submit">Search</button>
-    </form>
+    function handleSubmit(e) {
+        e.preventDefault()
+        props.filterMusic(searchTerm)
+    }
+
+    return (
+        <div>
+            <form onSubmit={handleSubmit}>
+            <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type='text' placeholder='search by artist...'></input>
+            <button type='submit'>search!</button>
+            <button onClick={() => props.getAllMusic()}> reset table</button>
+            </form>
+        </div>
+    )
 };
 
-export default NavBar
+export default NavBar;
