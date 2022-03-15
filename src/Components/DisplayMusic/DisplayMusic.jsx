@@ -16,7 +16,6 @@ const DisplayMusic = (props) => {
           </tr>
         </thead>
         <tbody>
-
         </tbody>
       </table>
   
