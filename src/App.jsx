@@ -28,15 +28,18 @@ function App(){
   const getAllMusic= async()=>{   // this request will retrieve all of the songs from our database
     let response = await axios.get('http://127.0.0.1:8000/music/');  //the URL we are using the same endpoint here that we tested in postman
     setMusic(response.data);
-    console.log(response.data)
-    setDisplayMusic(response.data);  // here we are saving the result in our hook above on line 8
+    console.log(response.data) // here we are saving the result in our hook above on line 8
 
   }
 
   const filterMusic = (searchTerm) => {
     console.log(searchTerm);
     let matchingMusic = music.filter((music)=> {
-      if(music.title.toLowerCase().includes(searchTerm.toLowerCase()) || music.artist.toLowerCase().includes(searchTerm.toLowerCase()) || music.album.toLowerCase().includes(searchTerm.toLowerCase()) || music.release_date.toLowerCase().includes(searchTerm.toLowerCase()) || music.genre.toLowerCase().includes(searchTerm.toLowerCase())){
+      if(music.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+          music.artist.toLowerCase().includes(searchTerm.toLowerCase()) || 
+          music.album.toLowerCase().includes(searchTerm.toLowerCase()) || 
+          music.release_date.toLowerCase().includes(searchTerm.toLowerCase()) || 
+          music.genre.toLowerCase().includes(searchTerm.toLowerCase())){
         return true
       }
       else return false
