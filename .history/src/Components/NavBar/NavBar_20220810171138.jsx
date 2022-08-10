@@ -10,7 +10,7 @@ const NavBar = (props) => {
     }
 
     return (
-        <div className="">
+        <div className="visuel">
             <form onSubmit={handleSubmit}>
             <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type='text' placeholder='search by artist...'></input>
             <button type='submit'>search!</button>

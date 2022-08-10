@@ -26,7 +26,7 @@ const AddMusic = (props) => {
       
       <div>
             <label>Title</label>
-             <input type='text' color="white" onChange ={(event) => setTitle(event.target.value)} value= {title}/>
+             <input type='text' name='nofacture' STYLE='color=#FFFF00' size=6 maxlength=7>' onChange ={(event) => setTitle(event.target.value)} value= {title}/>
       </div>
       <div> 
             <label>Artist</label>

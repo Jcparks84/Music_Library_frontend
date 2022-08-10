@@ -21,12 +21,10 @@ const AddMusic = (props) => {
     props.addMusic(newMusic);
   }
   return (
-    
     <form className='content' onSubmit={handleSubmit}>
-      
       <div>
             <label>Title</label>
-             <input type='text' color="white" onChange ={(event) => setTitle(event.target.value)} value= {title}/>
+             <input type='text' onChange ={(event) => setTitle(event.target.value)} value= {title}/>
       </div>
       <div> 
             <label>Artist</label>
@@ -36,14 +34,10 @@ const AddMusic = (props) => {
             <label>Album</label>
             <input type='text' onChange={(event) => setAlbum(event.target.value)} value= {album}/>
       </div>
-      <div>
             <label>Release Date</label>
             <input type='date' onChange={(event) => setReleaseDate(event.target.value)} value= {release_date}/>
-      </div>
-      <div>          
             <label>Genre</label>
-            <input type='text' onChange={(event) => setGenre(event.target.value)} value= {genre}/> 
-      </div>          
+            <input type='text' onChange={(event) => setGenre(event.target.value)} value= {genre}/>           
             <input type="submit" value="Add Post"></input>
         </form>
   );

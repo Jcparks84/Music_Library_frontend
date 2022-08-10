@@ -4,7 +4,6 @@ import NavBar from './Components/NavBar/NavBar';
 import AddMusic from './Components/AddMusic/AddMusic';
 import './Components/DisplayMusic/DisplayMusic'
 import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
-import './App.css'
 
 
 

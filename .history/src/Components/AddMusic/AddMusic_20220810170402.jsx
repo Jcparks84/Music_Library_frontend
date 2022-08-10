@@ -21,12 +21,10 @@ const AddMusic = (props) => {
     props.addMusic(newMusic);
   }
   return (
-    
     <form className='content' onSubmit={handleSubmit}>
-      
       <div>
             <label>Title</label>
-             <input type='text' color="white" onChange ={(event) => setTitle(event.target.value)} value= {title}/>
+             <input type='text' onChange ={(event) => setTitle(event.target.value)} value= {title}/>
       </div>
       <div> 
             <label>Artist</label>
